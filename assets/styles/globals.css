@@ -304,9 +304,6 @@
   .p-3 {
     padding: calc(var(--spacing) * 3);
   }
-  .px-2 {
-    padding-inline: calc(var(--spacing) * 2);
-  }
   .px-3 {
     padding-inline: calc(var(--spacing) * 3);
   }
@@ -403,10 +400,10 @@
       }
     }
   }
-  .sidebar-show\:lg\:w-72 {
+  .sidebar-show\:lg\:w-80 {
     &:where(.sidebar-show, .sidebar-show *) {
       @media (width >= 64rem) {
-        width: calc(var(--spacing) * 72);
+        width: calc(var(--spacing) * 80);
       }
     }
   }
