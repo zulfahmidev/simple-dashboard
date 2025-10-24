@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="en" class="dark">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -13,18 +14,21 @@
     <script src="assets/vendor/fontawesome/js/all.min.js"></script>
 
 </head>
+
 <body class="bg-background dark:text-white">
-    
+
     <!-- Wrapper -->
     <div class="flex h-screen">
 
         <!-- Sidebar -->
-        <div class="w-fit sidebar-show sidebar-show:lg:w-80 bg-surface h-full" id="sidebar">
+        <div class="w-fit sidebar-show sidebar-show:lg:w-80 bg-surface h-full flex flex-col" id="sidebar">
 
             <!-- Header -->
-            <div class="h-24 px-5 flex items-center justify-center gap-3">
-                <img class="h-8" src="assets/images/logo.png" alt="Logo Dashboard">
-                <h1 class="text-2xl hidden sidebar-show:lg:block">Dashboard</h1>
+            <div>
+                <div class="h-24 px-5 flex items-center justify-center gap-3">
+                    <img class="h-8" src="assets/images/logo.png" alt="Logo Dashboard">
+                    <h1 class="text-2xl hidden sidebar-show:lg:block">Dashboard</h1>
+                </div>
             </div>
             <!-- End Header -->
 
@@ -36,7 +40,9 @@
 
                     <div class="text-sm font-light opacity-50 px-4 hidden sidebar-show:lg:block">Platform</div>
 
-                    <div class="p-3 hover:bg-foreground/10 text-primary cursor-pointer rounded-lg flex gap-3 items-center">
+                    <!-- Link Active -->
+                    <div
+                        class="p-3 text-white bg-gradient-to-tl from-primary/50 to-primary rounded-lg flex gap-3 items-center">
                         <div class="text-2xl"><i class="fa fa-square-poll-vertical"></i></div>
                         <span class="hidden sidebar-show:lg:block">Dashboard</span>
                     </div>
@@ -48,18 +54,20 @@
 
                     <div class="text-sm font-light opacity-50 px-4 hidden sidebar-show:lg:block">Components</div>
 
-                    <!-- Link Active -->
-                    <div class="p-3 hover:bg-foreground/10 opacity-50 hover:opacity-100 cursor-pointer rounded-lg flex gap-3 items-center">
+                    <div
+                        class="p-3 hover:bg-foreground/10 opacity-50 hover:opacity-100 cursor-pointer rounded-lg flex gap-3 items-center">
                         <div class="text-2xl"><i class="fa fa-table"></i></div>
                         <span class="hidden sidebar-show:lg:block">Table</span>
                     </div>
 
-                    <div class="p-3 hover:bg-foreground/10 opacity-50 hover:opacity-100 cursor-pointer rounded-lg flex gap-3 items-center">
+                    <div
+                        class="p-3 hover:bg-foreground/10 opacity-50 hover:opacity-100 cursor-pointer rounded-lg flex gap-3 items-center">
                         <div class="text-2xl"><i class="fa fa-file"></i></div>
                         <span class="hidden sidebar-show:lg:block">Form</span>
                     </div>
 
-                    <div class="p-3 hover:bg-foreground/10 opacity-50 hover:opacity-100 cursor-pointer rounded-lg flex gap-3 items-center">
+                    <div
+                        class="p-3 hover:bg-foreground/10 opacity-50 hover:opacity-100 cursor-pointer rounded-lg flex gap-3 items-center">
                         <div class="text-2xl"><i class="fa fa-stop"></i></div>
                         <span class="hidden sidebar-show:lg:block">Buttons</span>
                     </div>
@@ -69,30 +77,77 @@
             </div>
             <!-- End Navigations -->
 
+            <!-- <div class="h-full flex flex-col justify-end p-5">
+                <div class="aspect-square w-full rounded-lg bg-primary/10"></div>
+            </div> -->
         </div>
         <!-- End Sidebar -->
 
-        <!-- Content -->
-        <div class="w-full">
+        <!-- Main -->
+        <main class="w-full">
 
-            <!-- Header -->
-            <header class="h-24 flex items-center px-5">
+            <!-- Topbar -->
+            <header class="h-24 flex items-center justify-between px-5">
 
-                <!-- Sidebar Toggle -->
-                <div class="h-10 w-10 rounded-lg hover:bg-foreground/10 opacity-50 hover:opacity-100 cursor-pointer items-center justify-center text-2xl hidden lg:flex" id="sidebar-toggle">
-                    <i class="fa fa-bars"></i>
+                <div class="flex items-center">
+                    <!-- Sidebar Toggle -->
+                    <div class="h-10 w-10 rounded-lg hover:bg-foreground/10 opacity-50 hover:opacity-100 cursor-pointer items-center justify-center text-2xl hidden lg:flex"
+                        id="sidebar-toggle">
+                        <i class="fa fa-bars"></i>
+                    </div>
+                    <!-- End Sidebar Toggle -->
+
+                    <!-- Page Name -->
+                    <div class="text-3xl px-3">Dashboard</div>
+                    <!-- End Page Name -->
                 </div>
-                <!-- End Sidebar Toggle -->
+
+                <div class="">
+                    <!-- Profile -->
+                    <div class="flex items-center gap-3 relative group">
+                        <div class="text-sm">Mas Admin</div>
+                        <div class="w-10 h-10 rounded-full bg-foreground/10 overflow-hidden">
+                            <img src="assets/images/profile.jpeg" alt="profile picture">
+                        </div>
+
+                        <!-- Dropdown Navigation -->
+                        <div class="hidden group-hover:block absolute -right-5 top-11">
+                            <div class="border border-foreground/10 rounded-lg w-48 bg-surface py-3">
+                                <div
+                                    class="px-3 py-2 opacity-75 hover:opacity-100 hover:bg-foreground/10 cursor-pointer flex gap-3">
+                                    <div class="">
+                                        <i class="fa fa-sign-out"></i>
+                                    </div>
+                                    <div class="">Logout</div>
+                                </div>
+                            </div>
+                        </div>
+                        <!-- End Dropdown Navigation -->
+                    </div>
+                    <!-- End Profile -->
+                </div>
 
             </header>
-            <!-- End Header -->
+            <!-- End Topbar -->
 
-        </div>
-        <!-- End Content -->
+            <!-- Content -->
+            <section class="px-5">
+                <div class="grid grid-cols-4 gap-6">
+                    <div class="bg-surface rounded-lg p-5"></div>
+                    <div class="bg-surface rounded-lg p-5"></div>
+                    <div class="bg-surface rounded-lg p-5"></div>
+                    <div class="bg-surface rounded-lg p-5"></div>
+                </div>
+            </section>
+            <!-- End Content -->
+
+        </main>
+        <!-- End Main -->
 
     </div>
     <!-- End Wrapper -->
 
     <script src="assets/scripts/index.js"></script>
 </body>
+
 </html>
